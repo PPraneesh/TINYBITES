@@ -7,9 +7,9 @@ const ChildDashboard = () => {
   const [showFacts, setShowFacts] = useState(false);
 
   const moodIcons = {
-    happy: <Smile className="text-green-500" size={48} />,
-    sad: <Frown className="text-red-500" size={48} />,
-    neutral: <Meh className="text-yellow-500" size={48} />
+    happy: <Smile className="text-green-500" size={80} />,
+    sad: <Frown className="text-red-500" size={80} />,
+    neutral: <Meh className="text-yellow-500" size={80} />
   };  
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-200 to-purple-200 p-8">
@@ -30,19 +30,27 @@ const ChildDashboard = () => {
         <div className="flex items-center justify-center mt-4">
             <button className="bg-red-400 text-white px-4 py-2 rounded-full hover:bg-red-500 transition-colors"
             onClick={()=>{
-                toast("ouch ouch ouch..",{
-                    icon: <span style={{ fontSize: '2.5rem' }}>🤕</span>,
-                    style: {
-                      fontSize: '1.2rem',
-                      height: '4rem',
-                    }
-                })
+              const messages = [
+                "ouch!",
+                "arghh ",
+                "oh no..."
+              ];
+              
+              const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+              
+              toast(randomMessage, {
+                icon: <span style={{ fontSize: '2.5rem' }}>🤕</span>,
+                style: {
+                  fontSize: '1.2rem',
+                  height: '4rem',
+                }
+              });
                 setPetMood('sad')
                 setTimeout(() => {
                     setPetMood('happy');
                   }, 2000);
             } }
-            >Hit</button>
+            >Smack</button>
         </div>
         <div className="mt-4 text-center">
           <button className="bg-green-400 text-white px-4 py-2 rounded-full hover:bg-green-500 transition-colors" 
