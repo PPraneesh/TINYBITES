@@ -112,7 +112,7 @@ Wednesday: Whole grain toast with avocado, fish tacos"
       <section className="bg-white rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-2xl font-semibold text-amber-700 mb-4">Virtual Pet Monitoring</h2>
         <div className="flex items-center justify-center bg-yellow-100 p-4 rounded-md">
-          <img src="/api/placeholder/200/200" alt="Virtual Pet" className="rounded-full" />
+          <img src="/simba.png" alt="Virtual Pet" className="rounded-full border-4 w-40 aspect-square border-indigo-300 " />
         </div>
         <p className="text-center mt-4 text-amber-700">Your pet is thriving! Keep up the good work!</p>
       </section>
